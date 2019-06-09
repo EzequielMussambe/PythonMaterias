@@ -1,3 +1,2 @@
-# como imprimir alguma coisa na tela ou screen
-
-print("Hello World")
+#imprimir holla mundo
+print("hola mundo")
