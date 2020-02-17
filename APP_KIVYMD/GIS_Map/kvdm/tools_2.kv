@@ -1,0 +1,47 @@
+#:import utils kivy.utils
+#:set color_shadow [0, 0, 0, .2980392156862745]
+
+<Tools>:
+    orientation:"vertical"
+    
+    size_hint:None,None
+    height:60
+    GridLayout:
+        padding:2,2
+        spacing:2,2
+        cols:6
+        MDIconButton:
+            icon:"plus-circle"
+            text_color:[0,0,0,1]
+            size_hint:None,None
+            height:30
+            on_release:app.zoom_in_level()
+        MDIconButton:
+            icon:"minus-circle"
+            text_color:[0,0,0,1]
+            height:30
+            on_release:app.zoom_out_level()
+            
+        MDIconButton:
+            icon:"C:\\Users\\emcfm\\Downloads\\XwzcnM-search-icon-square-find-button-hd-image.png"
+            text_color:[0,0,0,1]
+            size_hint:None,None
+            size:50,45
+        MDTextFieldRect:
+            id:newone
+            hint_text:"Latitude Longitude"
+            foreground_color:0,0,0,1
+            hint_text_color:0.5,0.5,.5,.5
+            cursor_color:1,0,0,1
+            size_hint:None,None
+            normal_color: color_shadow
+            active_color: color_shadow
+            height:30
+            width:300
+        MDIconButton:
+            icon:"refresh"
+            text_color:[0,0,0,1]
+            size_hint:None,None
+            height:30    
+            
+            

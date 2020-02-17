@@ -1,0 +1,76 @@
+#:kivy 1.11.1
+#:import MapView kivy.garden.mapview.MapView
+#:import utils kivy.utils
+#:import partial functools.partial
+#:include "kvdm/tools_2.kv"
+#from kivy.garden.mapview import MapView
+
+# BoxLayout:
+#     title:"GIS_Map"
+#     orientation:"vertical"
+#     MDToolbar:
+#         title:"Angola Map"
+#         md_bg_color:app.theme_cls.primary_color
+#     Button:
+#         text:"change"
+#         on_release:app.change_widget()
+#         #callback:app.change_widget
+<MyContent>:
+    size_hint:1, None
+    height:self.minimum_height
+    orientation:"vertical"
+    Button:
+        size_hint:None,None
+BoxLayout:
+    #oreintation:"vertical"
+    
+    # MDToolbar:
+    #     title:"MDBottomNavigation Tutorial"
+    #     md_bg_color:app.theme_cls.primary_color
+    #             #left_action_items:[["menu", lambda x:root.toggle_nav_drawer()]]
+    ScrollView:
+        size_hint_x:None
+        width:200
+        #heigt:50
+        GridLayout:
+
+            id:panel_container
+            cols:1
+            size_hint:None,None
+            height:self.minimum_height
+            width:200
+
+    ScreenManager:
+
+        Screen:
+            MapView:
+                id:mains
+                lat:36.000
+                lon:-30.000
+                zoom:2
+                double_tap_zoom:True
+    # BoxLayout:
+    #     orientation:"vertical"
+
+    #     MDBottomNavigation:
+    #         #this is fancy screenmanagers
+    #         MDBottomNavigationItem:
+    #             text:"Screen 1 text"
+    #             name:"screen1"
+    #             icon:"account-card-details-outline"
+    #             BoxLayout:
+    #                 Button:
+    #                 Button:
+    #                 Button:
+    #         MDBottomNavigationItem:
+    #             text:"Screen 2"
+    #             name:"screen2"
+    #             icon:"plus"
+    #             BoxLayout: # only one screen allowed
+    #                 orientation:"vertical"
+    #                 MapView:
+    #                     id:mains
+    #                     lat:36.000
+    #                     lon:-30.000
+    #                     zoom:2
+    #                     double_tap_zoom:True
