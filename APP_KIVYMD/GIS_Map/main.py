@@ -1,4 +1,4 @@
-# from kivy.app import App
+from kivy.app import App
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.garden.mapview import MapView, MapMarkerPopup
@@ -41,7 +41,8 @@ class MainApp(MDApp):
     
     def on_start(self):
         print("esssss")
-        files=f.open("C:/Users/emcfm/Downloads/Angola/gis_osm_pois_free_1.shp")
+        files=f.open("C:\\Users\\EzequielMussambe\\Downloads\\angola\\angola-latest-free.shp\\gis_osm_pois_free_1.shp")
+            #"C:/Users/emcfm/Downloads/Angola/gis_osm_pois_free_1.shp")
         for s in files:
             if s["properties"]["fclass"].lower()=="hospital" or s["properties"]["fclass"].lower()=="doctors":
             
